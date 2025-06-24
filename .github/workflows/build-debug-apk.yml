@@ -30,8 +30,8 @@ jobs:
       run: mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/RtkGps-debug-$COMMIT_SHA.apk
 
     - name: Archive APK
-       uses: actions/upload-artifact@v4
-       with:
-          name: RtkGps-debug-apk-${{ env.COMMIT_SHA }}
-          path: app/build/outputs/apk/debug/*.apk
-          retention-days: 30
+      uses: actions/upload-artifact@v4
+      with:
+        name: RtkGps-debug-apk-${{ env.COMMIT_SHA }}
+        path: app/build/outputs/apk/debug/*.apk
+        retention-days: 30
